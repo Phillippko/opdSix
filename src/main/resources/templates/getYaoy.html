@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<table width="100%" border="1">
+    <tr>
+        <td>Название</td>
+        <td>Оригинальное название</td>
+        <td>Описание</td>
+        <td>Изображение</td>
+    </tr>
+    <tr th:each="yaoy : ${yaoyList}">
+        <td th:text="${yaoy.name}"></td>
+        <td th:text="${yaoy.origName}"></td>
+        <td th:text="${yaoy.description}"></td>
+        <td><img height="100px" src="" th:src="${yaoy.image}" alt=""></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
